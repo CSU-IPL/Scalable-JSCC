@@ -4,6 +4,11 @@ PyTorch code for scalable image JSCC under wireless channels (`awgn` and `raylei
 
 This README is rewritten for the current repository state after file cleanup.
 
+## Paper
+
+- Title: `Scalable Deep Joint Source-Channel Coding for Multi-User Wireless Image Transmission With Diverse Bandwidth Conditions`
+- Link: `https://ieeexplore.ieee.org/document/11250876`
+
 ## Current Files
 
 - `main.py`: Main training/evaluation pipeline.
@@ -103,15 +108,3 @@ python Entropy_Model_Train.py
 ```bash
 python HFM_Train.py
 ```
-
-## Key Runtime Notes
-
-- In `main.py`, `args.is_training` and `args.load_model` are set inside code, so script behavior may ignore CLI expectations unless you edit those lines.
-- In `main.py`, the Rayleigh branch references `test_h_list` but the example list is commented out. Define `test_h_list` before use.
-- `utils.py` currently constrains `--save_path` to two predefined checkpoint choices.
-
-## Suggested Open-Source Cleanup
-
-- Add a `LICENSE` file (for example, MIT or Apache-2.0).
-- Pin exact dependency versions in `requirements.txt`.
-- Add a short section with expected metric format and sample output.
